@@ -17,9 +17,9 @@ const Chat = ({ location }) => {
     const [disabled, setDisabled] = useState(false)
 
     const sendMessage = (e) => {
-        setDisabled(true)
         e.preventDefault()
         if (message) {
+            setDisabled(true)
             socket.emit('sendMessage', message, () => {
                 setMessage('')
                 setDisabled(false)
