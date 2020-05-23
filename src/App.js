@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Chat from './components/Chat/Chat';
-import Join from './components/Join/Join';
+import Chat from './components/Chat/Chat.js';
+import Join from './components/Join/Join.js';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -13,5 +13,6 @@ const App = () => {
     </Router>
   );
 }
+
 
 export default App;
