@@ -14,12 +14,15 @@ const Chat = ({ location }) => {
     const [room, setRoom] = useState('')
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([])
+    const [disabled, setDisabled] = useState(false)
 
     const sendMessage = (e) => {
+        setDisabled(true)
         e.preventDefault()
         if (message) {
             socket.emit('sendMessage', message, () => {
                 setMessage('')
+                setDisabled(false)
             })
         }
     }
@@ -59,7 +62,7 @@ const Chat = ({ location }) => {
             <div className="container">
                 <InfoBar room={room} />
                 <Messages messages={messages} name={name} />
-                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+                <Input disabled={disabled} message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
         </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Input.css'
 
 
-const Input = ({ message, sendMessage, setMessage }) => {
+const Input = ({ message, sendMessage, setMessage, disabled }) => {
     return (
         <form className="form">
             <input
@@ -12,7 +12,7 @@ const Input = ({ message, sendMessage, setMessage }) => {
                 onChange={e => setMessage(e.target.value)}
                 value={message}
             />
-            <button className="sendButton" onClick={sendMessage}>Send</button>
+            <button disabled={disabled} className="sendButton" onClick={sendMessage}>Send</button>
         </form>
     );
 }
