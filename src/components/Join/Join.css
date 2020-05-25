@@ -21,7 +21,7 @@ html {
   text-align: center;
   height: 100vh;
   align-items: center;
-  background-color: #1A1A1D;
+  background-color: transparent;
 }
 
 .joinInnerContainer {
@@ -30,15 +30,19 @@ html {
 
 .joinInput {
   border-radius: 0;
-  padding: 15px 20px;
+  padding: 12px 20px;
   width: 100%;
+  margin-top: 5px;
 }
 
 .heading {
   color: white;
   font-size: 2.5em;
   padding-bottom: 10px;
-  border-bottom: 2px solid white;
+  background-color: palevioletred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {

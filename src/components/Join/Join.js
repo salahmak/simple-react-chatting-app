@@ -22,7 +22,9 @@ const Join = () => {
     return (
         <div className="joinOuterContainer">
             <div className="joinInnerContainer" >
-                <h1 className="heading">Join</h1>
+                <div class="heading">
+                    <h3 className="m-0">Join</h3>
+                </div>
 
                 <div>
                     <input type="text" value={name} className="joinInput" onChange={handleNameChange} placeholder="name" />
