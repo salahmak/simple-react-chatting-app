@@ -19,7 +19,7 @@ const Chat = ({ location }) => {
     const [messages, setMessages] = useState([])
     const [users, setUsers] = useState([])
     const [disabled, setDisabled] = useState(false)
-    const ENDPOINT = process.env.ENDPOINT || 'localhost:5000';
+    const ENDPOINT = process.env.ENDPOINT || 'https://nasal-peridot-minnow.glitch.me/';
 
 
 
