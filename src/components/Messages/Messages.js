@@ -8,8 +8,12 @@ import './Messages.css';
 
 const Messages = ({ messages, name }) => (
     <ScrollToBottom className="messages">
-        {messages.map((message, i) => <div key={i}><Message message={message} name={name} /></div>)}
-    </ScrollToBottom>
+        <div className="card-body msg_card_body">
+
+            {messages.map((message, i) => <div key={i}><Message message={message} name={name} /></div>)}
+
+        </div>
+    </ScrollToBottom >
 );
 
 export default Messages;
