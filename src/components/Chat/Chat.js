@@ -59,8 +59,7 @@ const Chat = ({ location }) => {
             const sentMessage = { type: 'text', content: message }
             setDisabled(true)
             socket.emit('sendMessage', sentMessage, () => {
-                const isBad = badWordValidation(message)
-                if (isBad) alert('Please be nice xd')
+                
                 setMessage('')
                 setDisabled(false)
             })
@@ -75,9 +74,6 @@ const Chat = ({ location }) => {
         })
     }
 
-    const badWordValidation = (msg) => {
-        return (msg.toLowerCase().includes('fuck') || msg.toLowerCase().includes('bitch') || msg.toLowerCase().includes('cyka') || msg.toLowerCase().includes('dick') || msg.toLowerCase().includes('asshole') || msg.toLowerCase().includes('shit'))
-    }
 
     return (
         <div className="outerContainer">
